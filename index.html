@@ -20,22 +20,17 @@
             color: #fff;
             min-height: 100vh;
             padding: 0;
-            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            padding-top: 140px; /* زيادة المساحة للرأس الثابت */
-        }
-
+        /* جعل الرأس ثابت */
         header {
             position: fixed;
             top: 0;
             right: 0;
             left: 0;
-            z-index: 100;
+            z-index: 1000;
             text-align: center;
             padding: 20px;
             background: rgba(0, 0, 0, 0.85);
@@ -43,6 +38,33 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* جعل التذييل ثابت */
+        footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 70px auto; /* مساحة للرأس والتذييل الثابتين */
+            padding: 20px;
+            width: 100%;
+            flex: 1;
+            overflow-y: auto;
         }
 
         h1 {
@@ -61,7 +83,7 @@
         .home-btn {
             position: absolute;
             top: 20px;
-            left: 20px;
+            right: 20px;
             background: #1a2a6c;
             color: white;
             border: none;
@@ -73,7 +95,7 @@
             font-weight: bold;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
-            display: none;
+            z-index: 1001;
         }
 
         .home-btn:hover {
@@ -82,7 +104,7 @@
         }
 
         .home-btn i {
-            margin-right: 5px;
+            margin-left: 8px;
         }
 
         .menu-toggle {
@@ -99,7 +121,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            z-index: 101;
+            z-index: 1001;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
@@ -136,7 +158,7 @@
             border-radius: 15px;
             margin-bottom: 30px;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            min-height: 400px;
+            min-height: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -234,7 +256,7 @@
 
         .save-notification {
             position: fixed;
-            bottom: 20px;
+            bottom: 80px;
             right: 20px;
             background: #4caf50;
             color: white;
@@ -243,17 +265,6 @@
             display: none;
             z-index: 1000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            font-size: 1rem;
-            line-height: 1.6;
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .love {
@@ -265,7 +276,7 @@
         .developer {
             color: #a3d39d;
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
         @keyframes pulse {
@@ -345,6 +356,10 @@
             border-color: #2d5a27;
         }
 
+        .file-input {
+            margin-top: 5px;
+        }
+
         .notification-settings {
             background: rgba(0, 0, 0, 0.3);
             padding: 15px;
@@ -398,46 +413,15 @@
             transform: translateX(26px);
         }
 
-        @media (max-width: 768px) {
-    header {
-        padding: 60px 15px 15px 15px; /* زيادة المساحة العلوية للرأس */
-        position: relative;
-    }
-
-    .home-btn {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        left: auto;
-        margin: 0;
-        padding: 8px 12px;
-        font-size: 0.9rem;
-        z-index: 102; /* زيادة قيمة z-index */
-        background: rgba(26, 42, 108, 0.9);
-    }
-
-    h1 {
-        margin-top: 10px;
-        font-size: 1.6rem;
-        padding: 0 40px; /* إضافة مساحة على الجانبين */
-        text-align: center;
-    }
-
-    .description {
-        font-size: 0.9rem;
-        padding: 0 20px;
-        text-align: center;
-    }
-
-    .container {
-        padding-top: 160px; /* زيادة المساحة للرأس الموسع */
-    }
-}
-
-            header {
+        /* تحسينات للتوافق مع جميع الأجهزة */
+        @media (max-width: 1200px) {
+            .container {
                 padding: 15px;
+                margin: 80px auto 70px auto;
             }
+        }
 
+        @media (max-width: 992px) {
             h1 {
                 font-size: 1.8rem;
             }
@@ -446,16 +430,36 @@
                 font-size: 1rem;
             }
 
-            .dua-card {
-                padding: 15px;
-            }
-
             .dua-title {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             .dua-content {
                 font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 15px 15px 15px;
+            }
+
+            .home-btn {
+                top: 15px;
+                right: 15px;
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+                padding: 0 40px;
+                margin-top: 10px;
+            }
+
+            .description {
+                font-size: 0.9rem;
+                padding: 0 20px;
             }
 
             .menu-toggle {
@@ -471,33 +475,91 @@
                 min-width: 180px;
             }
 
+            .container {
+                padding: 15px;
+                margin: 120px auto 70px auto;
+            }
+
             .modal-content {
                 width: 95%;
                 padding: 15px;
             }
 
-            .home-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px; /* تغيير من left إلى right */
-    left: auto; /* إضافة هذه الخاصية */
-    background: #1a2a6c;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
+            footer {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
 
-.home-btn i {
-    margin-left: 8px; /* تغيير من margin-right إلى margin-left */
-    margin-right: 0; /* إضافة هذه الخاصية */
-}
+            .save-notification {
+                bottom: 70px;
+                right: 15px;
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.4rem;
+                padding: 0 30px;
+            }
+
+            .description {
+                font-size: 0.85rem;
+            }
+
+            .home-btn {
+                padding: 6px 10px;
+                font-size: 0.8rem;
+            }
+
+            .home-btn i {
+                margin-left: 5px;
+            }
+
+            .dua-card {
+                padding: 15px;
+            }
+
+            .btn {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+
+            .content-section {
+                padding: 15px;
+            }
+        }
+
+        /* تحسينات للوضع الأفقي على الهواتف */
+        @media (max-height: 500px) and (orientation: landscape) {
+            header {
+                padding: 15px;
+            }
+
+            .container {
+                margin: 70px auto 60px auto;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+                margin-bottom: 5px;
+            }
+
+            .description {
+                font-size: 0.9rem;
+                margin-bottom: 10px;
+            }
+
+            .content-placeholder {
+                padding: 20px;
+            }
+
+            .content-placeholder i {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -538,6 +600,15 @@
                 <label for="dua-content">نص الذكر</label>
                 <textarea id="dua-content" class="form-control" rows="4" placeholder="أدخل نص الذكر"></textarea>
             </div>
+            <div class="form-group">
+                <label for="dua-audio">رابط الملف الصوتي (اختياري)</label>
+                <input type="text" id="dua-audio" class="form-control" placeholder="أدخل رابط الملف الصوتي">
+                <small style="color: #ccc; display: block; margin-top: 5px;">يمكنك استخدام روابط من مواقع مثل SoundCloud أو YouTube أو رفع الملف إلى خدمة استضافة ملفات</small>
+            </div>
+            <div class="form-group">
+                <label for="dua-count">عدد المرات (اختياري)</label>
+                <input type="number" id="dua-count" class="form-control" placeholder="عدد مرات تكرار الذكر" min="1">
+            </div>
             <button class="btn" id="save-dua-btn">حفظ الذكر</button>
         </div>
     </div>
@@ -574,15 +645,15 @@
         </div>
     </div>
 
-    <div class="container">
-        <header>
-            <button class="home-btn" id="home-btn">
-                <i class="fas fa-home"></i>
-            </button>
-            <h1>حصن المسلم - GT-HISNMUSLIM</h1>
-            <p class="description">أدعية وأذكار من القرآن والسنة النبوية</p>
-        </header>
+    <header>
+        <button class="home-btn" id="home-btn">
+            <i class="fas fa-home"></i> الرئيسية
+        </button>
+        <h1>حصن المسلم - GT-HISNMUSLIM</h1>
+        <p class="description">أدعية وأذكار من القرآن والسنة النبوية</p>
+    </header>
 
+    <div class="container">
         <div class="content-section" id="content-container">
             <div class="content-placeholder">
                 <i class="fas fa-mosque"></i>
@@ -590,13 +661,13 @@
                 <p>اختر من القائمة لعرض الأدعية والأذكار</p>
             </div>
         </div>
-
-        <footer>
-            <p>جميع الحقوق محفوظة © 2025 | حصن المسلم - GT-HISNMUSLIM</p>
-            <p>صمم بحب <span class="love">♥️</span> لخدمة القرآن الكريم والحديث النبوي</p>
-            <p class="developer">تم التطوير بواسطة: GNUTUX</p>
-        </footer>
     </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2025 | حصن المسلم - GT-HISNMUSLIM</p>
+        <p>صمم بحب <span class="love">♥️</span> لخدمة القرآن الكريم والحديث النبوي</p>
+        <p class="developer">تم التطوير بواسطة: GNUTUX</p>
+    </footer>
 
     <div class="save-notification" id="save-notification">
         تم حفظ التغييرات بنجاح!
@@ -3530,8 +3601,7 @@
 			}
 		]
 	}
-]
-;
+];
 
         // عناصر DOM
         const menuToggle = document.getElementById('menu-toggle');
@@ -3555,6 +3625,7 @@
 
         let currentCategory = null;
         let notificationTimer = null;
+        let currentPage = 'home'; // تتبع الصفحة الحالية
 
         // تهيئة التطبيق
         function initApp() {
@@ -3589,6 +3660,9 @@
             });
 
             startNotificationsIfEnabled();
+
+            // إظهار زر الرئيسية دائمًا
+            homeBtn.style.display = 'flex';
         }
 
         function populateNotificationCategories() {
@@ -3603,7 +3677,7 @@
 
         function renderCategories(data) {
             contentContainer.innerHTML = '';
-            homeBtn.style.display = 'none';
+            currentPage = 'home';
 
             data.forEach(category => {
                 const categoryCard = document.createElement('div');
@@ -3632,7 +3706,7 @@
             if (!category) return;
 
             currentCategory = categoryId;
-            homeBtn.style.display = 'flex';
+            currentPage = 'category';
 
             contentContainer.innerHTML = `
                 <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
@@ -3686,7 +3760,7 @@
 
         function goHome() {
             currentCategory = null;
-            homeBtn.style.display = 'none';
+            currentPage = 'home';
             renderCategories(AZKAR_DATA);
         }
 
@@ -3721,6 +3795,8 @@
 
         function showBookmarks() {
             const bookmarks = getBookmarks();
+            currentPage = 'bookmarks';
+
             if (bookmarks.length === 0) {
                 contentContainer.innerHTML = `
                     <div class="content-placeholder">
@@ -3788,9 +3864,11 @@
         function saveCustomDua() {
             const title = document.getElementById('dua-title').value;
             const content = document.getElementById('dua-content').value;
+            const audio = document.getElementById('dua-audio').value;
+            const count = document.getElementById('dua-count').value;
 
             if (!title || !content) {
-                showNotification('يرجى ملء جميع الحقول');
+                showNotification('يرجى ملء عنوان الذكر ونصه');
                 return;
             }
 
@@ -3799,6 +3877,8 @@
                 id: Date.now(),
                 title: title,
                 content: content,
+                audio: audio || '',
+                count: count || 1,
                 timestamp: new Date().toISOString()
             });
 
@@ -3806,6 +3886,8 @@
             addDuaModal.style.display = 'none';
             document.getElementById('dua-title').value = '';
             document.getElementById('dua-content').value = '';
+            document.getElementById('dua-audio').value = '';
+            document.getElementById('dua-count').value = '';
             showNotification('تم حفظ الذكر بنجاح');
         }
 
@@ -3896,6 +3978,7 @@
         }
 
         function showAbout() {
+            currentPage = 'about';
             contentContainer.innerHTML = `
                 <div class="content-placeholder">
                     <i class="fas fa-info-circle"></i>
