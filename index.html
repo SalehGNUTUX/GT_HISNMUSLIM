@@ -24,7 +24,7 @@
             flex-direction: column;
         }
 
-        /* جعل الرأس ثابت */
+        /* رأس ديناميكي يختفي عند التمرير */
         header {
             position: fixed;
             top: 0;
@@ -33,11 +33,50 @@
             z-index: 1000;
             text-align: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.9);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        header.hide-header {
+            transform: translateY(-100%);
+        }
+
+        /* فاصل أسفل الرأس لمنع التداخل */
+        .header-spacer {
+            height: 170px;
+            transition: height 0.3s ease;
+        }
+
+        header.hide-header + .header-spacer {
+            height: 10px;
+        }
+
+        /* زر إخفاء الرأس */
+        .toggle-header-btn {
+            position: fixed;
+            top: 15px;
+            left: 80px;
+            background: rgba(45, 90, 39, 0.8);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1002;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .toggle-header-btn:hover {
+            background: rgba(58, 107, 51, 0.9);
         }
 
         /* جعل التذييل ثابت */
@@ -60,7 +99,7 @@
 
         .container {
             max-width: 1200px;
-            margin: 80px auto 70px auto; /* مساحة للرأس والتذييل الثابتين */
+            margin: 20px auto 70px auto;
             padding: 20px;
             width: 100%;
             flex: 1;
@@ -413,11 +452,151 @@
             transform: translateX(26px);
         }
 
+        /* تحسينات شريط البحث */
+        .search-container {
+            position: static;
+            z-index: 1;
+            padding: 10px 0 0;
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border-bottom: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-box {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 2px rgba(45, 90, 39, 0.5);
+        }
+
+        /* تحسينات قارئ الصوت */
+        .audio-player {
+            width: 100%;
+            margin-top: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .audio-player audio {
+            width: 100%;
+        }
+
+        /* تحسينات عرض الأذكار */
+        .category-title {
+            font-size: 1.6rem;
+            color: #a3d39d;
+            margin: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+            width: 100%;
+        }
+
+        .dua-counter {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* تبويبات الأذكار */
+        .tabs-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* عنوان القسم + زر الإظهار */
+        .category-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .category-content {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .tab-btn.active {
+            background: #2d5a27;
+            font-weight: bold;
+        }
+
+        /* بطاقة الأذكار العشوائية */
+        .random-dua-card {
+            position: static;
+            z-index: 1;
+            background: rgba(163, 211, 157, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px auto 25px auto;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+        }
+
+        .random-dua-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .random-dua-category {
+            font-size: 0.9rem;
+            color: #a3d39d;
+            font-style: italic;
+        }
+
         /* تحسينات للتوافق مع جميع الأجهزة */
         @media (max-width: 1200px) {
             .container {
                 padding: 15px;
-                margin: 80px auto 70px auto;
+                margin: 20px auto 70px auto;
             }
         }
 
@@ -451,6 +630,13 @@
                 font-size: 0.9rem;
             }
 
+            .toggle-header-btn {
+                top: 15px;
+                left: 70px;
+                width: 35px;
+                height: 35px;
+            }
+
             h1 {
                 font-size: 1.6rem;
                 padding: 0 40px;
@@ -477,7 +663,23 @@
 
             .container {
                 padding: 15px;
-                margin: 120px auto 70px auto;
+                margin: 20px auto 70px auto;
+            }
+
+            .search-container {
+                padding: 10px 15px;
+            }
+
+            .search-input {
+                padding: 10px 15px;
+            }
+
+            .random-dua-card {
+                padding: 12px;
+            }
+
+            .random-dua-content {
+                font-size: 1rem;
             }
 
             .modal-content {
@@ -529,6 +731,21 @@
             .content-section {
                 padding: 15px;
             }
+
+            .search-container {
+            }
+
+            .random-dua-card {
+            }
+
+            .tabs-container {
+                gap: 5px;
+            }
+
+            .tab-btn {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
         }
 
         /* تحسينات للوضع الأفقي على الهواتف */
@@ -538,7 +755,7 @@
             }
 
             .container {
-                margin: 70px auto 60px auto;
+                margin: 170px auto 60px auto;
             }
 
             h1 {
@@ -559,12 +776,24 @@
                 font-size: 2rem;
                 margin-bottom: 10px;
             }
+
+            .search-container {
+                padding: 8px 10px;
+            }
+
+            .random-dua-card {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <button class="menu-toggle" id="menu-toggle">
         <i class="fas fa-bars"></i>
+    </button>
+
+    <button class="toggle-header-btn" id="toggle-header-btn">
+        <i class="fas fa-chevron-up"></i>
     </button>
 
     <div class="actions-menu" id="actions-menu">
@@ -645,21 +874,36 @@
         </div>
     </div>
 
-    <header>
+    <header id="main-header">
         <button class="home-btn" id="home-btn">
             <i class="fas fa-home"></i> الرئيسية
         </button>
         <h1>حصن المسلم - GT-HISNMUSLIM</h1>
         <p class="description">أدعية وأذكار من القرآن والسنة النبوية</p>
+        <!-- شريط البحث داخل الرأس -->
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="search-input" class="search-input" placeholder="ابحث عن ذكر أو دعاء...">
+            </div>
+        </div>
     </header>
+
+
+    <!-- فاصل أسفل الرأس لمنع التداخل مع المحتوى -->
+    <div id="header-spacer" class="header-spacer"></div>
+
+    <!-- بطاقة الأذكار العشوائية -->
+    <div class="random-dua-card" id="random-dua-card">
+        <div class="random-dua-content" id="random-dua-content"></div>
+        <div class="random-dua-category" id="random-dua-category"></div>
+    </div>
 
     <div class="container">
         <div class="content-section" id="content-container">
-            <div class="content-placeholder">
-                <i class="fas fa-mosque"></i>
-                <h3>مرحباً بك في حصن المسلم</h3>
-                <p>اختر من القائمة لعرض الأدعية والأذكار</p>
-            </div>
+            <!-- تبويبات الأذكار -->
+            <div class="tabs-container" id="tabs-container"></div>
+
+            <!-- سيتم عرض الأذكار هنا -->
         </div>
     </div>
 
@@ -674,7 +918,7 @@
     </div>
 
     <script>
-        // بيانات الأذكار الكاملة
+        // بيانات الأذكار الكاملة (مثال مختصر)
         const AZKAR_DATA = [
 	{
 		"id": 1,
@@ -3603,415 +3847,414 @@
 	}
 ];
 
-        // عناصر DOM
+        // DOM Elements
         const menuToggle = document.getElementById('menu-toggle');
         const actionsMenu = document.getElementById('actions-menu');
         const contentContainer = document.getElementById('content-container');
-        const saveNotification = document.getElementById('save-notification');
-        const bookmarkBtn = document.getElementById('bookmark-btn');
-        const addDuaBtn = document.getElementById('add-dua-btn');
-        const notificationsBtn = document.getElementById('notifications-btn');
-        const shareBtn = document.getElementById('share-btn');
-        const aboutBtn = document.getElementById('about-btn');
-        const addDuaModal = document.getElementById('add-dua-modal');
-        const notificationsModal = document.getElementById('notifications-modal');
-        const closeModalButtons = document.querySelectorAll('.close-modal');
-        const saveDuaBtn = document.getElementById('save-dua-btn');
-        const saveNotificationsBtn = document.getElementById('save-notifications-btn');
-        const notificationsToggle = document.getElementById('notifications-toggle');
-        const notificationInterval = document.getElementById('notification-interval');
-        const notificationCategory = document.getElementById('notification-category');
         const homeBtn = document.getElementById('home-btn');
+        const searchInput = document.getElementById('search-input');
+        const mainHeader = document.getElementById('main-header');
+        const toggleHeaderBtn = document.getElementById('toggle-header-btn');
+        const tabsContainer = document.getElementById('tabs-container');
+        const randomDuaCard = document.getElementById('random-dua-card');
+        const randomDuaContent = document.getElementById('random-dua-content');
+        const randomDuaCategory = document.getElementById('random-dua-category');
 
-        let currentCategory = null;
-        let notificationTimer = null;
-        let currentPage = 'home'; // تتبع الصفحة الحالية
+        // حالة التطبيق
+        let isHeaderHidden = false;
+        let lastScrollY = window.scrollY;
+        let activeTab = 'all';
+        let randomDuaInterval;
 
         // تهيئة التطبيق
         function initApp() {
-            loadFromLocalStorage();
-            renderCategories(AZKAR_DATA);
-            populateNotificationCategories();
-
-            menuToggle.addEventListener('click', toggleMenu);
-            bookmarkBtn.addEventListener('click', showBookmarks);
-            addDuaBtn.addEventListener('click', showAddDuaModal);
-            notificationsBtn.addEventListener('click', showNotificationsModal);
-            shareBtn.addEventListener('click', shareApp);
-            aboutBtn.addEventListener('click', showAbout);
-            homeBtn.addEventListener('click', goHome);
-            saveDuaBtn.addEventListener('click', saveCustomDua);
-            saveNotificationsBtn.addEventListener('click', saveNotificationSettings);
-
-            closeModalButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    addDuaModal.style.display = 'none';
-                    notificationsModal.style.display = 'none';
-                });
-            });
-
-            document.addEventListener('click', (e) => {
-                if (!actionsMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                    actionsMenu.classList.remove('show');
-                }
-
-                if (e.target === addDuaModal) addDuaModal.style.display = 'none';
-                if (e.target === notificationsModal) notificationsModal.style.display = 'none';
-            });
-
-            startNotificationsIfEnabled();
-
-            // إظهار زر الرئيسية دائمًا
-            homeBtn.style.display = 'flex';
+            showAllAzkar();
+            createTabs();
+            showRandomDua();
+            startRandomDuaInterval();
+            setupEventListeners();
         }
 
-        function populateNotificationCategories() {
-            notificationCategory.innerHTML = '<option value="all">جميع الأذكار</option>';
+        // إعداد مستمعي الأحداث
+        function setupEventListeners() {
+            menuToggle.addEventListener('click', toggleActionsMenu);
+            document.addEventListener('click', closeActionsMenuOnClickOutside);
+            document.addEventListener('click', handleCategoryToggle);
+            homeBtn.addEventListener('click', showAllAzkar);
+            searchInput.addEventListener('input', performSearch);
+            toggleHeaderBtn.addEventListener('click', toggleHeader);
+            window.addEventListener('scroll', handleScroll);
+
+            // إعداد أزرار القائمة
+            document.getElementById('bookmark-btn').addEventListener('click', showBookmarks);
+            document.getElementById('add-dua-btn').addEventListener('click', () => {
+                document.getElementById('add-dua-modal').style.display = 'flex';
+            });
+            document.getElementById('notifications-btn').addEventListener('click', () => {
+                document.getElementById('notifications-modal').style.display = 'flex';
+            });
+            document.getElementById('share-btn').addEventListener('click', shareApp);
+            document.getElementById('about-btn').addEventListener('click', showAbout);
+
+            // إعداد إغلاق النوافذ
+            document.querySelectorAll('.close-modal').forEach(btn => {
+                btn.addEventListener('click', closeModals);
+            });
+
+            window.addEventListener('click', closeModalsOnClickOutside);
+            document.getElementById('save-dua-btn').addEventListener('click', saveDua);
+            document.getElementById('save-notifications-btn').addEventListener('click', saveNotifications);
+        }
+
+        // عرض/إخفاء القائمة
+        function toggleActionsMenu() {
+            actionsMenu.classList.toggle('show');
+        }
+
+        // إغلاق القائمة عند النقر خارجها
+        function closeActionsMenuOnClickOutside(e) {
+            if (!menuToggle.contains(e.target) && !actionsMenu.contains(e.target)) {
+                actionsMenu.classList.remove('show');
+            }
+        }
+
+        // إنشاء تبويبات الأذكار
+        function createTabs() {
+            // تبويب "الكل"
+            const allTab = document.createElement('button');
+            allTab.className = 'tab-btn active';
+            allTab.textContent = 'الكل';
+            allTab.dataset.tab = 'all';
+            allTab.addEventListener('click', () => switchTab('all'));
+            tabsContainer.appendChild(allTab);
+
+            // إنشاء تبويب لكل فئة
             AZKAR_DATA.forEach(category => {
-                const option = document.createElement('option');
-                option.value = category.id;
-                option.textContent = category.category;
-                notificationCategory.appendChild(option);
+                const tab = document.createElement('button');
+                tab.className = 'tab-btn';
+                tab.textContent = category.category;
+                tab.dataset.tab = category.id;
+                tab.addEventListener('click', () => switchTab(category.id));
+                tabsContainer.appendChild(tab);
             });
         }
 
-        function renderCategories(data) {
-            contentContainer.innerHTML = '';
-            currentPage = 'home';
+        // تبديل التبويبات
+        function switchTab(tabId) {
+            activeTab = tabId;
 
-            data.forEach(category => {
-                const categoryCard = document.createElement('div');
-                categoryCard.classList.add('dua-card');
-                categoryCard.dataset.categoryId = category.id;
+            // تحديث حالة التبويبات النشطة
+            document.querySelectorAll('.tab-btn').forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.tab === tabId);
+            });
 
-                categoryCard.innerHTML = `
-                    <h3 class="dua-title">${category.category}</h3>
-                    <div class="dua-content">${category.array.length} ذكر</div>
-                    <div style="margin-top: 15px;">
-                        <button class="btn view-category-btn">
-                            <i class="fas fa-eye"></i> عرض الأذكار
-                        </button>
-                    </div>
-                `;
+            // عرض المحتوى حسب التبويب المحدد
+            if (tabId === 'all') {
+                showAllAzkar();
+            } else {
+                showCategory(parseInt(tabId));
+            }
+        }
 
-                const viewBtn = categoryCard.querySelector('.view-category-btn');
-                viewBtn.addEventListener('click', () => viewCategory(category.id));
+        // عرض جميع الأذكار
+        function showAllAzkar() {
+            let html = '';
 
-                contentContainer.appendChild(categoryCard);
+            AZKAR_DATA.forEach(category => {
+                html += createCategoryHeader(category.category, category.id);
+                html += `<div id="cat-${category.id}" class="category-content" style="display:none;">`;
+
+                category.array.forEach(dua => {
+                    html += createDuaCard(dua, category.category);
+                });
+
+                html += `</div>`;
+            });
+
+            contentContainer.innerHTML = html;
+            activeTab = 'all';
+
+            // تحديث حالة التبويب النشط
+            document.querySelectorAll('.tab-btn').forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.tab === 'all');
             });
         }
 
-        function viewCategory(categoryId) {
-            const category = AZKAR_DATA.find(c => c.id == categoryId);
+        // عرض أذكار فئة محددة
+        function showCategory(categoryId) {
+            const category = AZKAR_DATA.find(cat => cat.id === categoryId);
             if (!category) return;
 
-            currentCategory = categoryId;
-            currentPage = 'category';
-
-            contentContainer.innerHTML = `
-                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                    <button class="btn btn-sm" id="back-to-categories">
-                        <i class="fas fa-arrow-right"></i> العودة للتصنيفات
-                    </button>
-                    <h3>${category.category}</h3>
-                </div>
-            `;
-
-            const backButton = document.getElementById('back-to-categories');
-            backButton.addEventListener('click', () => {
-                currentCategory = null;
-                renderCategories(AZKAR_DATA);
-            });
+            let html = '';
+            html += createCategoryHeader(category.category, category.id);
+            html += `<div id="cat-${category.id}" class="category-content">`;
 
             category.array.forEach(dua => {
-                const duaCard = document.createElement('div');
-                duaCard.classList.add('dua-card');
+                html += createDuaCard(dua, category.category);
+            });
 
-                duaCard.innerHTML = `
-                    <div class="dua-content">${dua.text}</div>
-                    ${dua.count > 1 ? `<div style="color: #ccc; margin-bottom: 10px;">عدد المرات: ${dua.count}</div>` : ''}
+            html += `</div>`;
+            contentContainer.innerHTML = html;
+        }
+
+        // إنشاء بطاقة ذكر
+        function createDuaCard(dua, category) {
+            return `
+                <div class="dua-card">
+                    <p class="dua-content">${dua.text}</p>
+                    ${dua.count > 1 ? `<div class="dua-counter">التكرار: ${dua.count} مرة</div>` : ''}
                     ${dua.audio ? `
-                    <div style="margin-top: 15px;">
-                        <audio controls style="width: 100%;">
-                            <source src="${dua.audio}" type="audio/mpeg">
-                            متصفحك لا يدعم تشغيل الصوتيات.
-                        </audio>
-                    </div>
-                    ` : ''}
-                    <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-                        <button class="btn btn-sm copy-btn" data-text="${dua.text}">
-                            <i class="fas fa-copy"></i> نسخ
-                        </button>
-                        <button class="btn btn-sm bookmark-btn" data-category="${categoryId}" data-dua="${dua.id}">
-                            <i class="far fa-bookmark"></i> حفظ
-                        </button>
-                    </div>
-                `;
-
-                const copyBtn = duaCard.querySelector('.copy-btn');
-                copyBtn.addEventListener('click', () => copyToClipboard(copyBtn.dataset.text));
-
-                const bookmarkBtn = duaCard.querySelector('.bookmark-btn');
-                bookmarkBtn.addEventListener('click', () => toggleBookmark(categoryId, dua.id));
-
-                contentContainer.appendChild(duaCard);
-            });
-        }
-
-        function goHome() {
-            currentCategory = null;
-            currentPage = 'home';
-            renderCategories(AZKAR_DATA);
-        }
-
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                showNotification('تم نسخ النص إلى الحافظة');
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-            });
-        }
-
-        function toggleBookmark(categoryId, duaId) {
-            const bookmarks = getBookmarks();
-            const key = `${categoryId}-${duaId}`;
-
-            if (bookmarks.includes(key)) {
-                const index = bookmarks.indexOf(key);
-                bookmarks.splice(index, 1);
-                showNotification('تمت الإزالة من المفضلة');
-            } else {
-                bookmarks.push(key);
-                showNotification('تمت الإضافة إلى المفضلة');
-            }
-
-            localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
-        }
-
-        function getBookmarks() {
-            const bookmarks = localStorage.getItem('bookmarks');
-            return bookmarks ? JSON.parse(bookmarks) : [];
-        }
-
-        function showBookmarks() {
-            const bookmarks = getBookmarks();
-            currentPage = 'bookmarks';
-
-            if (bookmarks.length === 0) {
-                contentContainer.innerHTML = `
-                    <div class="content-placeholder">
-                        <i class="far fa-bookmark"></i>
-                        <h3>لا توجد أدعية مفضلة</h3>
-                        <p>قم بحفظ بعض الأدعية لعرضها هنا</p>
-                    </div>
-                `;
-            } else {
-                contentContainer.innerHTML = '<h3 style="width: 100%; margin-bottom: 20px;">الأدعية المفضلة</h3>';
-
-                bookmarks.forEach(bookmark => {
-                    const [categoryId, duaId] = bookmark.split('-');
-                    const category = AZKAR_DATA.find(c => c.id == categoryId);
-                    if (!category) return;
-
-                    const dua = category.array.find(d => d.id == duaId);
-                    if (!dua) return;
-
-                    const duaCard = document.createElement('div');
-                    duaCard.classList.add('dua-card');
-
-                    duaCard.innerHTML = `
-                        <h4 class="dua-title">${category.category}</h4>
-                        <div class="dua-content">${dua.text}</div>
-                        ${dua.count > 1 ? `<div style="color: #ccc; margin-bottom: 10px;">عدد المرات: ${dua.count}</div>` : ''}
-                        ${dua.audio ? `
-                        <div style="margin-top: 15px;">
-                            <audio controls style="width: 100%;">
+                        <div class="audio-player">
+                            <audio controls>
                                 <source src="${dua.audio}" type="audio/mpeg">
                                 متصفحك لا يدعم تشغيل الصوتيات.
                             </audio>
                         </div>
-                        ` : ''}
-                        <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-                            <button class="btn btn-sm copy-btn" data-text="${dua.text}">
-                                <i class="fas fa-copy"></i> نسخ
-                            </button>
-                            <button class="btn btn-sm bookmark-btn btn-danger" data-category="${categoryId}" data-dua="${dua.id}">
-                                <i class="fas fa-trash"></i> إزالة
-                            </button>
-                        </div>
-                    `;
-
-                    const copyBtn = duaCard.querySelector('.copy-btn');
-                    copyBtn.addEventListener('click', () => copyToClipboard(copyBtn.dataset.text));
-
-                    const bookmarkBtn = duaCard.querySelector('.bookmark-btn');
-                    bookmarkBtn.addEventListener('click', () => {
-                        toggleBookmark(categoryId, duaId);
-                        showBookmarks();
-                    });
-
-                    contentContainer.appendChild(duaCard);
-                });
-            }
-            actionsMenu.classList.remove('show');
+                    ` : ''}
+                    <div class="dua-category" style="font-size: 0.9rem; color: #a3d39d; margin-top: 10px;">
+                        ${category}
+                    </div>
+                </div>
+            `;
         }
 
-        function showAddDuaModal() {
-            addDuaModal.style.display = 'flex';
-            actionsMenu.classList.remove('show');
+        // توليد عنوان قسم قابل للطي
+        function createCategoryHeader(title, categoryId) {
+            return `
+                <div class="category-header" data-category-id="${categoryId}">
+                    <h2 class="category-title" style="margin-bottom:0;">
+                        ${title}
+                        <button class="btn btn-sm toggle-category" data-target="cat-${categoryId}" style="margin-right:10px;">
+                            إظهار/إخفاء
+                        </button>
+                    </h2>
+                </div>
+            `;
         }
 
-        function saveCustomDua() {
-            const title = document.getElementById('dua-title').value;
-            const content = document.getElementById('dua-content').value;
-            const audio = document.getElementById('dua-audio').value;
-            const count = document.getElementById('dua-count').value;
+        function handleCategoryToggle(e) {
+            const btn = e.target.closest('.toggle-category');
+            if (!btn) return;
+            const targetId = btn.getAttribute('data-target');
+            const target = document.getElementById(targetId);
+            if (!target) return;
+            target.style.display = target.style.display === 'none' ? '' : 'none';
+        }
 
-            if (!title || !content) {
-                showNotification('يرجى ملء عنوان الذكر ونصه');
+        // البحث التلقائي
+        function performSearch() {
+            const searchTerm = searchInput.value.trim();
+
+            if (searchTerm === '') {
+                if (activeTab === 'all') {
+                    showAllAzkar();
+                } else {
+                    showCategory(parseInt(activeTab));
+                }
                 return;
             }
 
-            let customAzkar = JSON.parse(localStorage.getItem('customAzkar') || '[]');
-            customAzkar.push({
-                id: Date.now(),
-                title: title,
-                content: content,
-                audio: audio || '',
-                count: count || 1,
-                timestamp: new Date().toISOString()
+            const results = [];
+
+            // البحث في جميع الأذكار أو الفئة النشطة فقط
+            const categoriesToSearch = activeTab === 'all'
+                ? AZKAR_DATA
+                : AZKAR_DATA.filter(cat => cat.id === parseInt(activeTab));
+
+            categoriesToSearch.forEach(category => {
+                category.array.forEach(dua => {
+                    if (dua.text.includes(searchTerm) || category.category.includes(searchTerm)) {
+                        results.push({
+                            category: category.category,
+                            text: dua.text,
+                            count: dua.count,
+                            audio: dua.audio
+                        });
+                    }
+                });
             });
 
-            localStorage.setItem('customAzkar', JSON.stringify(customAzkar));
-            addDuaModal.style.display = 'none';
-            document.getElementById('dua-title').value = '';
-            document.getElementById('dua-content').value = '';
-            document.getElementById('dua-audio').value = '';
-            document.getElementById('dua-count').value = '';
-            showNotification('تم حفظ الذكر بنجاح');
+            displaySearchResults(results, searchTerm);
         }
 
-        function showNotificationsModal() {
-            const notificationsEnabled = localStorage.getItem('notificationsEnabled') === 'true';
-            const interval = localStorage.getItem('notificationInterval') || '60';
-            const category = localStorage.getItem('notificationCategory') || 'all';
-
-            notificationsToggle.checked = notificationsEnabled;
-            notificationInterval.value = interval;
-            notificationCategory.value = category;
-
-            notificationsModal.style.display = 'flex';
-            actionsMenu.classList.remove('show');
-        }
-
-        function saveNotificationSettings() {
-            const enabled = notificationsToggle.checked;
-            const interval = notificationInterval.value;
-            const category = notificationCategory.value;
-
-            localStorage.setItem('notificationsEnabled', enabled);
-            localStorage.setItem('notificationInterval', interval);
-            localStorage.setItem('notificationCategory', category);
-
-            clearInterval(notificationTimer);
-            if (enabled) startNotifications(parseInt(interval) * 60000);
-
-            notificationsModal.style.display = 'none';
-            showNotification('تم حفظ إعدادات الإخطارات');
-        }
-
-        function startNotificationsIfEnabled() {
-            const enabled = localStorage.getItem('notificationsEnabled') === 'true';
-            const interval = parseInt(localStorage.getItem('notificationInterval') || '60') * 60000;
-
-            if (enabled) startNotifications(interval);
-        }
-
-        function startNotifications(interval) {
-            notificationTimer = setInterval(() => showRandomDuaNotification(), interval);
-        }
-
-        function showRandomDuaNotification() {
-            const category = localStorage.getItem('notificationCategory') || 'all';
-            let azkarToUse = [];
-
-            if (category === 'all') {
-                AZKAR_DATA.forEach(cat => azkarToUse = azkarToUse.concat(cat.array));
-            } else {
-                const selectedCategory = AZKAR_DATA.find(c => c.id == category);
-                if (selectedCategory) azkarToUse = selectedCategory.array;
+        // عرض نتائج البحث
+        function displaySearchResults(results, searchTerm) {
+            if (results.length === 0) {
+                contentContainer.innerHTML = `
+                    <div class="content-placeholder">
+                        <i class="fas fa-search"></i>
+                        <h3>لا توجد نتائج</h3>
+                        <p>لم يتم العثور على أي ذكر يحتوي على "${searchTerm}"</p>
+                    </div>
+                `;
+                return;
             }
 
-            if (azkarToUse.length === 0) return;
+            let html = `<h2 class="category-title">نتائج البحث عن: "${searchTerm}"</h2>`;
 
-            const randomIndex = Math.floor(Math.random() * azkarToUse.length);
-            const randomDua = azkarToUse[randomIndex];
+            results.forEach(result => {
+                html += `
+                    <div class="dua-card">
+                        <h3 class="dua-title">${result.category}</h3>
+                        <p class="dua-content">${result.text}</p>
+                        ${result.count > 1 ? `<div class="dua-counter">التكرار: ${result.count} مرة</div>` : ''}
+                        ${result.audio ? `
+                            <div class="audio-player">
+                                <audio controls>
+                                    <source src="${result.audio}" type="audio/mpeg">
+                                    متصفحك لا يدعم تشغيل الصوتيات.
+                                </audio>
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
 
-            if ('Notification' in window && Notification.permission === 'granted') {
-                new Notification('حصن المسلم - ذكر', {
-                    body: randomDua.text.substring(0, 100) + '...',
-                    icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📿</text></svg>'
+            contentContainer.innerHTML = html;
+        }
+
+        // إخفاء/إظهار الرأس
+        function toggleHeader() {
+            isHeaderHidden = !isHeaderHidden;
+            mainHeader.classList.toggle('hide-header', isHeaderHidden);
+
+            const icon = toggleHeaderBtn.querySelector('i');
+            icon.className = isHeaderHidden ? 'fas fa-chevron-down' : 'fas fa-chevron-up';
+        }
+
+        // التعامل مع التمرير
+        function handleScroll() {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                // التمرير لأسفل - إخفاء الرأس
+                mainHeader.classList.add('hide-header');
+                isHeaderHidden = true;
+                const icon = toggleHeaderBtn.querySelector('i');
+                icon.className = 'fas fa-chevron-down';
+            } else if (window.scrollY < lastScrollY) {
+                // التمرير لأعلى - إظهار الرأس
+                mainHeader.classList.remove('hide-header');
+                isHeaderHidden = false;
+                const icon = toggleHeaderBtn.querySelector('i');
+                icon.className = 'fas fa-chevron-up';
+            }
+
+            lastScrollY = window.scrollY;
+        }
+
+        // عرض أذكار عشوائية
+        function showRandomDua() {
+            // جمع كل الأذكار في مصفوفة واحدة
+            const allAzkar = [];
+            AZKAR_DATA.forEach(category => {
+                category.array.forEach(dua => {
+                    allAzkar.push({
+                        text: dua.text,
+                        category: category.category
+                    });
                 });
-            }
+            });
+
+            // اختيار ذكر عشوائي
+            const randomIndex = Math.floor(Math.random() * allAzkar.length);
+            const randomDua = allAzkar[randomIndex];
+
+            // عرض الذكر العشوائي
+            randomDuaContent.textContent = randomDua.text;
+            randomDuaCategory.textContent = randomDua.category;
         }
 
-        function requestNotificationPermission() {
-            if ('Notification' in window) {
-                Notification.requestPermission().then(permission => {
-                    if (permission === 'granted') showNotification('تم تفعيل الإخطارات بنجاح');
-                });
-            }
+        // بدء عرض الأذكار العشوائية كل دقيقة
+        function startRandomDuaInterval() {
+            randomDuaInterval = setInterval(showRandomDua, 60000); // كل دقيقة
         }
 
+        // عرض الأدعية المفضلة
+        function showBookmarks() {
+            contentContainer.innerHTML = `
+                <div class="content-placeholder">
+                    <i class="fas fa-bookmark"></i>
+                    <h3>الأدعية المفضلة</h3>
+                    <p>سيتم عرض الأدعية المفضلة هنا</p>
+                </div>
+            `;
+        }
+
+        // مشاركة التطبيق
         function shareApp() {
             if (navigator.share) {
                 navigator.share({
                     title: 'حصن المسلم - GT-HISNMUSLIM',
-                    text: 'تطبيق الأذكار والأدعية من القرآن والسنة النبوية',
+                    text: 'تطبيق حصن المسلم للأدعية والأذكار من القرآن والسنة',
                     url: window.location.href
-                }).then(() => showNotification('شكراً للمشاركة!'))
-                .catch(err => console.error('Error sharing:', err));
+                })
+                .catch(error => {
+                    console.log('Error sharing:', error);
+                });
             } else {
-                showNotification('ميزة المشاركة غير مدعومة في متصفحك');
+                alert('ميزة المشاركة غير مدعومة في متصفحك. يمكنك نسخ الرابط يدوياً: ' + window.location.href);
             }
-            actionsMenu.classList.remove('show');
         }
 
+        // عن التطبيق
         function showAbout() {
-            currentPage = 'about';
             contentContainer.innerHTML = `
                 <div class="content-placeholder">
                     <i class="fas fa-info-circle"></i>
                     <h3>عن التطبيق</h3>
-                    <p>حصن المسلم - GT-HISNMUSLIM</p>
-                    <p>تطبيق مجاني لعرض الأدعية والأذكار من القرآن الكريم والسنة النبوية</p>
-                    <p>إصدار 1.0.0</p>
-                    <div style="margin-top: 20px;">
-                        <button class="btn" id="request-permission-btn">
-                            <i class="fas fa-bell"></i> طلب إذن الإخطارات
-                        </button>
-                    </div>
+                    <p>حصن المسلم هو تطبيق يحتوي على أدعية وأذكار من القرآن الكريم والسنة النبوية المطهرة.</p>
+                    <p>تم تطويره لخدمة القرآن الكريم والحديث النبوي.</p>
+                    <p class="developer">تم التطوير بواسطة: GNUTUX</p>
                 </div>
             `;
-
-            const permissionBtn = document.getElementById('request-permission-btn');
-            permissionBtn.addEventListener('click', requestNotificationPermission);
-            actionsMenu.classList.remove('show');
         }
 
-        function toggleMenu() {
-            actionsMenu.classList.toggle('show');
+        // إغلاق النوافذ المنبثقة
+        function closeModals() {
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.style.display = 'none';
+            });
         }
 
-        function showNotification(message) {
-            saveNotification.textContent = message;
-            saveNotification.style.display = 'block';
-            setTimeout(() => saveNotification.style.display = 'none', 3000);
+        // إغلاق النوافذ عند النقر خارجها
+        function closeModalsOnClickOutside(e) {
+            document.querySelectorAll('.modal').forEach(modal => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
         }
 
-        function loadFromLocalStorage() {}
+        // حفظ الذكر الجديد
+        function saveDua() {
+            const title = document.getElementById('dua-title').value;
+            const content = document.getElementById('dua-content').value;
 
-        document.addEventListener('DOMContentLoaded', initApp);
+            if (!title || !content) {
+                alert('يرجى ملء جميع الحقول المطلوبة');
+                return;
+            }
+
+            showSaveNotification();
+            document.getElementById('add-dua-modal').style.display = 'none';
+        }
+
+        // حفظ إعدادات الإخطارات
+        function saveNotifications() {
+            showSaveNotification();
+            document.getElementById('notifications-modal').style.display = 'none';
+        }
+
+        // عرض إشعار الحفظ
+        function showSaveNotification() {
+            const notification = document.getElementById('save-notification');
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        // تهيئة التطبيق عند تحميل الصفحة
+        window.addEventListener('load', initApp);
     </script>
 </body>
 </html>
