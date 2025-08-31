@@ -39,6 +39,9 @@
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
 
         header.hide-header {
@@ -95,6 +98,9 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
             line-height: 1.6;
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
 
         .container {
@@ -880,7 +886,6 @@
         </button>
         <h1>حصن المسلم - GT-HISNMUSLIM</h1>
         <p class="description">أدعية وأذكار من القرآن والسنة النبوية</p>
-        <!-- شريط البحث داخل الرأس -->
         <div class="search-container">
             <div class="search-box">
                 <input type="text" id="search-input" class="search-input" placeholder="ابحث عن ذكر أو دعاء...">
@@ -4252,6 +4257,21 @@
                 notification.style.display = 'none';
             }, 3000);
         }
+                // طلب صلاحيات الإشعارات تلقائياً عند تحميل الصفحة
+        document.addEventListener("DOMContentLoaded", () => {
+            if ("Notification" in window) {
+                if (Notification.permission === "default") {
+                    Notification.requestPermission().then(permission => {
+                        if (permission === "granted") {
+                            new Notification("✅ تم تفعيل الإشعارات", {
+                                body: "ستصلك التنبيهات من حصن المسلم تلقائياً.",
+                                icon: "📿"
+                            });
+                        }
+                    });
+                }
+            }
+        });
 
         // تهيئة التطبيق عند تحميل الصفحة
         window.addEventListener('load', initApp);
