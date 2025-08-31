@@ -856,18 +856,18 @@
                 <button class="close-modal">&times;</button>
             </div>
             <div class="form-group">
-                <label>
-                    تفعيل الإخطارات
-                    <label class="switch">
-                        <input type="checkbox" id="notifications-toggle">
-                        <span class="slider"></span>
-                    </label>
-                </label>
-            </div>
+    <label>
+        تفعيل الإخطارات
+        <label class="switch">
+            <input type="checkbox" id="notifications-toggle" checked>
+            <span class="slider"></span>
+        </label>
+    </label>
+</div>
             <div class="notification-settings">
                 <div class="form-group">
                     <label for="notification-interval">الفاصل الزمني بين الإخطارات (دقائق)</label>
-                    <input type="number" id="notification-interval" class="form-control" min="1" max="360" value="60">
+                    <input type="number" id="notification-interval" class="form-control" min="1" max="360" value="5">
                 </div>
                 <div class="form-group">
                     <label for="notification-category">اختر نوع الأذكار للإخطارات</label>
@@ -4138,7 +4138,7 @@
             } else if (window.scrollY < lastScrollY) {
                 // التمرير لأعلى - إظهار الرأس
                 mainHeader.classList.remove('hide-header');
-                isHeaderHidden = false;
+                isHeaderHidden = true;
                 const icon = toggleHeaderBtn.querySelector('i');
                 icon.className = 'fas fa-chevron-up';
             }
