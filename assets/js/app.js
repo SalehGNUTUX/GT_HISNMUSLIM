@@ -479,6 +479,11 @@
       els.menu.classList.remove('open');
       openModal('about-modal');
     });
+    $('#menu-notifications').addEventListener('click', () => {
+      els.menu.classList.remove('open');
+      window.GTNotifications?.openModal();
+      openModal('notifications-modal');
+    });
     $('#menu-storage').addEventListener('click', async () => {
       els.menu.classList.remove('open');
       const cached = await window.GTAudio.listCached();
