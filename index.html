@@ -57,6 +57,7 @@
           <button id="menu-favorites" type="button"><i class="fas fa-heart"></i> المفضلة</button>
           <button id="menu-custom" type="button"><i class="fas fa-feather-pointed"></i> أذكاري</button>
           <button id="menu-add-dua" type="button"><i class="fas fa-plus-circle"></i> إضافة ذكر جديد</button>
+          <button id="menu-notifications" type="button"><i class="fas fa-bell"></i> إشعارات الأذكار</button>
           <button id="menu-storage" type="button"><i class="fas fa-database"></i> التخزين الصوتي</button>
           <button id="menu-share" type="button"><i class="fas fa-share-alt"></i> مشاركة</button>
           <button id="menu-about" type="button"><i class="fas fa-info-circle"></i> عن التطبيق</button>
@@ -139,10 +140,44 @@
           <li>تخزين صوتي اختياري لكل ذكر</li>
         </ul>
         <p>المصدر الأصلي: <a href="http://www.hisnmuslim.com" target="_blank" rel="noopener">hisnmuslim.com</a></p>
-        <p>التطوير: <span class="dev" style="color:var(--brand)">GNUTUX — Saleh Alqanoot</span></p>
+        <p>التطوير: <a href="https://github.com/SalehGNUTUX/GT_HISNMUSLIM" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700;">SalehGNUTUX</a></p>
       </div>
       <div class="modal-footer">
         <button class="btn" data-close type="button">إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة إشعارات الأذكار -->
+  <div class="modal-backdrop" id="notifications-modal">
+    <div class="modal" role="dialog" aria-labelledby="notif-modal-title">
+      <div class="modal-header">
+        <h3 id="notif-modal-title"><i class="fas fa-bell"></i> إشعارات الأذكار</h3>
+        <button class="modal-close" type="button" aria-label="إغلاق">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          <label for="notif-enabled" style="margin:0;font-weight:600;">تفعيل الإشعارات الدورية</label>
+          <label class="switch">
+            <input type="checkbox" id="notif-enabled">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="form-group" style="margin-top:16px;">
+          <label for="notif-interval">الفترة بين إشعار وآخر (بالدقائق)</label>
+          <input type="number" id="notif-interval" class="form-control" min="1" max="360" value="30">
+          <div class="form-hint">القيمة المقترحة: 30 دقيقة — الحد الأدنى 1 دقيقة</div>
+        </div>
+        <div style="background:var(--bg-soft);border-radius:10px;padding:12px 14px;font-size:.87rem;line-height:1.7;margin-top:8px;">
+          <strong>صلاحية الإشعارات:</strong> <span id="notif-perm-status">…</span><br>
+          <span class="form-hint">إن ظهر "محظور"، غيّر الإعداد من رمز القفل في شريط المتصفح.</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" data-close type="button">إلغاء</button>
+        <button class="btn" id="save-notifications-btn" type="button">
+          <i class="fas fa-save"></i> حفظ الإعدادات
+        </button>
       </div>
     </div>
   </div>
@@ -170,6 +205,7 @@
   <script src="assets/js/bookmarks.js"></script>
   <script src="assets/js/audio-cache.js"></script>
   <script src="assets/js/pwa.js"></script>
+  <script src="assets/js/notifications.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

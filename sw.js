@@ -21,6 +21,7 @@ const SHELL_ASSETS = [
   'assets/js/bookmarks.js',
   'assets/js/audio-cache.js',
   'assets/js/pwa.js',
+  'assets/js/notifications.js',
   'assets/js/app.js',
   'assets/icons/icon.svg',
   'assets/icons/icon-192.png',
