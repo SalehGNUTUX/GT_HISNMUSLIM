@@ -29,7 +29,7 @@
   <header class="site-header">
     <div class="header-row">
       <div class="brand">
-        <div class="brand-mark">📿</div>
+        <button id="brand-btn" class="brand-mark" type="button" title="الرئيسية — إنعاش العرض">📿</button>
         <div class="brand-title">
           <span class="t1">حصن المسلم</span>
           <span class="t2">أذكار وأدعية من الكتاب والسنة</span>
@@ -66,10 +66,34 @@
     </div>
   </header>
 
-  <!-- شريط التبويبات -->
-  <nav class="tabs-bar" aria-label="أقسام الأذكار">
-    <div id="tabs-bar" class="tabs-scroll"></div>
-  </nav>
+  <!-- شريط التنقل السريع -->
+  <div class="quick-bar">
+    <div class="quick-bar-inner">
+      <div id="quick-tabs" class="quick-tabs">
+        <button class="tab-chip active" data-tab="all"><span>🏠</span><span>الكل</span></button>
+        <button class="tab-chip" data-tab="favorites"><span>❤️</span><span>المفضلة</span></button>
+        <button class="tab-chip" data-tab="custom"><span>✍️</span><span>أذكاري</span></button>
+      </div>
+      <button id="cat-open-btn" class="cat-open-btn" type="button" title="قائمة الأقسام">
+        <i class="fas fa-list-ul"></i>
+        <span>الأقسام</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- درج الأقسام العمودي -->
+  <div id="cat-overlay" class="cat-overlay" aria-hidden="true">
+    <aside id="cat-drawer" class="cat-drawer" role="dialog" aria-label="قائمة الأقسام">
+      <div class="cat-drawer-head">
+        <h3 class="cat-drawer-title"><i class="fas fa-list-ul"></i> الأقسام</h3>
+        <button id="cat-close-btn" class="modal-close" type="button" aria-label="إغلاق">✕</button>
+      </div>
+      <div class="cat-drawer-search-wrap">
+        <input id="cat-search" type="search" class="cat-drawer-search" placeholder="ابحث في الأقسام…" autocomplete="off">
+      </div>
+      <ul id="cat-list" class="cat-list" role="list"></ul>
+    </aside>
+  </div>
 
   <!-- المحتوى الرئيسي -->
   <main id="main-content" aria-live="polite"></main>
