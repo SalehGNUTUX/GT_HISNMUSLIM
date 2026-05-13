@@ -1,0 +1,29 @@
+{
+  "id": 63,
+  "category": "من أدعية الاستسقاء",
+  "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_064.mp3",
+  "filename": "ar_7esn_AlMoslem_by_Doors_064",
+  "array": [
+    {
+      "id": 1,
+      "text": "((اللَّهُمَّ اسْقِنَا غَيْثاً مُغِيثاً مَرِيئاً مَرِيعاً، نَافِعاً غَيْرَ ضَارٍّ، عَاجِلاً غَيْرَ آجِلٍ)).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/169.mp3",
+      "filename": "169"
+    },
+    {
+      "id": 2,
+      "text": "((اللَّهُمَّ أَغِثْنَا، اللَّهُمَّ أَغِثْنَا، اللَّهُمَّ أَغِثْنَا)).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/170.mp3",
+      "filename": "170"
+    },
+    {
+      "id": 3,
+      "text": "((اللَّهُمَّ اسْقِ عِبَادَكَ، وَبَهَائِمَكَ، وَانْشُرْ رَحْمَتَكَ، وَأَحْيِي بَلَدَكَ الْمَيِّتَ)).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/171.mp3",
+      "filename": "171"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": 40,
+  "category": "دعاء من أصابه وسوسة في الإيمان",
+  "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_041.mp3",
+  "filename": "ar_7esn_AlMoslem_by_Doors_041",
+  "array": [
+    {
+      "id": 1,
+      "text": "((يَسْتَعِيذُ بِاللَّهِ و يَنْتَهِي عَمَّا شك فِيهِ)).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/133.mp3",
+      "filename": "133"
+    },
+    {
+      "id": 2,
+      "text": "((يَقُولُ: ((آمَنْتُ بِاللَّهِ وَرُسُلِهِ)).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/134.mp3",
+      "filename": "134"
+    },
+    {
+      "id": 3,
+      "text": "((يَقْرَأُ قَوْلَهُ تَعَالَى: ﴿هُوَ الْأوَّلُ وَالْآخِرُ وَالظّاهِرُ وَالْباطِنُ وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ﴾)).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/135.mp3",
+      "filename": "135"
+    }
+  ]
+}

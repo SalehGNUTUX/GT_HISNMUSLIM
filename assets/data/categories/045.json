@@ -1,0 +1,29 @@
+{
+  "id": 45,
+  "category": "دعاء طرد الشيطان و وساوسه",
+  "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_046.mp3",
+  "filename": "ar_7esn_AlMoslem_by_Doors_046",
+  "array": [
+    {
+      "id": 1,
+      "text": "((الْاسْتِعَاذَةُ بِاللَّهِ مِنْهُ)).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/141.mp3",
+      "filename": "141"
+    },
+    {
+      "id": 2,
+      "text": "((الْأَذَانُ)).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/142.mp3",
+      "filename": "142"
+    },
+    {
+      "id": 3,
+      "text": "((الْأَذْكَارُ وَقِرَاءَةُ الْقُرْآنِ)).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/143.mp3",
+      "filename": "143"
+    }
+  ]
+}

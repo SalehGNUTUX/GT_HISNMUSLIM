@@ -1,0 +1,22 @@
+{
+  "id": 16,
+  "category": "الدعاء لمن لبس ثوبا جديدا",
+  "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_005.mp3",
+  "filename": "ar_7esn_AlMoslem_by_Doors_005",
+  "array": [
+    {
+      "id": 1,
+      "text": "(تُبْلِي وَيُخْلِفُ اللَّهُ تَعَالَى)",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/7.mp3",
+      "filename": "7"
+    },
+    {
+      "id": 2,
+      "text": "(اِلْبَسْ جَدِيداً وَعِشْ حَمِيداً وَمُتْ شَهِيداً).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/8.mp3",
+      "filename": "8"
+    }
+  ]
+}

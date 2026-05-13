@@ -1,0 +1,22 @@
+{
+  "id": 49,
+  "category": "الدعاء للمريض في عيادته",
+  "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_050.mp3",
+  "filename": "ar_7esn_AlMoslem_by_Doors_050",
+  "array": [
+    {
+      "id": 1,
+      "text": "((لاَ بأْسَ طَهُورٌ إِنْ شَاءَ اللَّهُ)).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/147.mp3",
+      "filename": "147"
+    },
+    {
+      "id": 2,
+      "text": "((أَسْأَلُ اللَّهَ الْعَظيمَ رَبَّ الْعَرْشِ الْعَظِيمِ أَنْ يَشْفيَكَ)) (سبع مرات).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/148.mp3",
+      "filename": "148"
+    }
+  ]
+}
