@@ -119,7 +119,7 @@ git push origin feature/AmazingFeature
 
 ## 👥 المطور
 
-**GNUTUX** — [Saleh Alqanoot](https://github.com/salehgnutux)
+**GNUTUX** — [SalehGNUTUX](https://github.com/salehgnutux)
 
 ## 🌟 شكر خاص
 
