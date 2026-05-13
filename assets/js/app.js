@@ -2,15 +2,15 @@
 (function () {
   const els = {
     main: null,
-    tabsBar: null,
+    quickTabs: null,
     searchInput: null,
-    randomCard: null,
-    randomText: null,
-    randomCat: null,
-    randomRefresh: null,
     scrollTop: null,
     menuBtn: null,
     menu: null,
+    catOverlay: null,
+    catDrawer: null,
+    catSearch: null,
+    catList: null,
   };
 
   const state = {
@@ -75,31 +75,49 @@
       </div>`;
   }
 
-  // ----- التبويبات -----
-  function renderTabs() {
-    const items = [
-      { id: 'all', label: 'الكل', icon: '🏠' },
-      { id: 'favorites', label: 'المفضلة', icon: '❤️' },
-      { id: 'custom', label: 'أذكاري', icon: '✍️' },
-      ...state.index.map(c => ({ id: c.id, label: c.category, icon: c.icon, count: c.count })),
-    ];
-    els.tabsBar.innerHTML = items.map(it => `
-      <button class="tab-chip ${state.activeTab == it.id ? 'active' : ''}" data-tab="${it.id}">
-        <span>${it.icon}</span>
-        <span>${escape(it.label)}</span>
-        ${it.count ? `<span class="badge">${it.count}</span>` : ''}
-      </button>
-    `).join('');
-  }
-
+  // ----- التبويبات السريعة (3 أزرار ثابتة في HTML) -----
   function setActiveTab(tabId) {
     state.activeTab = tabId;
-    $$('.tab-chip', els.tabsBar).forEach(b => {
+    // عيّن الحالة النشطة على التبويبات السريعة فقط
+    $$('.tab-chip', els.quickTabs).forEach(b => {
       b.classList.toggle('active', String(b.dataset.tab) === String(tabId));
     });
-    // مرر التبويب النشط إلى داخل المنطقة المرئية
-    const active = $('.tab-chip.active', els.tabsBar);
-    if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
+
+  // ----- درج الأقسام -----
+  function buildCatList(filter) {
+    const norm = window.GTData.normalize;
+    const term = norm ? norm(filter || '') : (filter || '');
+    const items = term
+      ? state.index.filter(c => (norm ? norm(c.category) : c.category).includes(term))
+      : state.index;
+
+    if (!items.length) {
+      els.catList.innerHTML = `<li class="cat-no-results">لا توجد أقسام تطابق "${escape(filter)}"</li>`;
+      return;
+    }
+    els.catList.innerHTML = items.map(c => `
+      <li>
+        <button class="cat-item ${state.activeTab === c.id ? 'active' : ''}"
+                data-cat-id="${c.id}" type="button">
+          <span class="ci-icon">${c.icon || '🕌'}</span>
+          <span class="ci-name">${escape(c.category)}</span>
+          <span class="ci-count">${c.count}</span>
+        </button>
+      </li>`).join('');
+  }
+
+  function openCatDrawer() {
+    buildCatList('');
+    els.catSearch.value = '';
+    els.catOverlay.classList.add('open');
+    els.catOverlay.setAttribute('aria-hidden', 'false');
+    els.catSearch.focus();
+  }
+
+  function closeCatDrawer() {
+    els.catOverlay.classList.remove('open');
+    els.catOverlay.setAttribute('aria-hidden', 'true');
   }
 
   // ----- العرض -----
@@ -289,16 +307,57 @@
 
   // ----- معالجات الأحداث -----
   function attachEvents() {
-    // التبويبات
-    els.tabsBar.addEventListener('click', (e) => {
+    // أيقونة الرئيسية
+    $('#brand-btn').addEventListener('click', () => {
+      setActiveTab('all');
+      state.searchTerm = '';
+      searchToken++;
+      if (els.searchInput) els.searchInput.value = '';
+      router();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // التبويبات السريعة (الكل / المفضلة / أذكاري)
+    els.quickTabs.addEventListener('click', (e) => {
       const chip = e.target.closest('.tab-chip');
       if (!chip) return;
-      const id = chip.dataset.tab;
-      const numId = Number(id);
-      const tabId = Number.isFinite(numId) && /^\d+$/.test(id) ? numId : id;
+      const tabId = chip.dataset.tab; // 'all' | 'favorites' | 'custom'
       setActiveTab(tabId);
       state.searchTerm = '';
-      searchToken++; // إلغاء أي بحث جارٍ
+      searchToken++;
+      if (els.searchInput) els.searchInput.value = '';
+      router();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // فتح درج الأقسام
+    $('#cat-open-btn').addEventListener('click', openCatDrawer);
+
+    // إغلاق الدرج
+    $('#cat-close-btn').addEventListener('click', closeCatDrawer);
+    els.catOverlay.addEventListener('click', (e) => {
+      if (e.target === els.catOverlay) closeCatDrawer();
+    });
+
+    // Escape يغلق الدرج
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeCatDrawer();
+    });
+
+    // فلترة الأقسام داخل الدرج
+    els.catSearch.addEventListener('input', (e) => {
+      buildCatList(e.target.value.trim());
+    });
+
+    // اختيار قسم من الدرج
+    els.catList.addEventListener('click', (e) => {
+      const btn = e.target.closest('.cat-item');
+      if (!btn) return;
+      const catId = Number(btn.dataset.catId);
+      closeCatDrawer();
+      setActiveTab(catId);
+      state.searchTerm = '';
+      searchToken++;
       if (els.searchInput) els.searchInput.value = '';
       router();
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -532,12 +591,16 @@
 
   // ----- التهيئة -----
   async function init() {
-    els.main = $('#main-content');
-    els.tabsBar = $('#tabs-bar');
+    els.main       = $('#main-content');
+    els.quickTabs  = $('#quick-tabs');
     els.searchInput = $('#search-input');
-    els.scrollTop = $('#scroll-top');
-    els.menuBtn = $('#menu-btn');
-    els.menu = $('#menu-dropdown');
+    els.scrollTop  = $('#scroll-top');
+    els.menuBtn    = $('#menu-btn');
+    els.menu       = $('#menu-dropdown');
+    els.catOverlay = $('#cat-overlay');
+    els.catDrawer  = $('#cat-drawer');
+    els.catSearch  = $('#cat-search');
+    els.catList    = $('#cat-list');
 
     els.main.innerHTML = '<div class="loader"><div class="spinner"></div></div>';
     try {
@@ -546,7 +609,12 @@
       els.main.innerHTML = '<div class="placeholder"><i class="fas fa-circle-exclamation ph-icon"></i><h3>تعذّر تحميل الفهرس</h3><p>تحقق من الاتصال وحدّث الصفحة</p></div>';
       return;
     }
-    renderTabs();
+    // حدّث عدد الأقسام في زر الفتح
+    const catBtn = $('#cat-open-btn');
+    if (catBtn) {
+      const countSpan = catBtn.querySelector('span');
+      if (countSpan) countSpan.textContent = `الأقسام (${state.index.length})`;
+    }
     attachEvents();
     await router();
   }

@@ -39,18 +39,28 @@
     return results;
   }
 
+  // تطبيع النص العربي: حذف الحركات والتطويل وتوحيد الألف
+  function normalize(str) {
+    if (!str) return '';
+    return str
+      .replace(/[ً-ٰٟـ]/g, '') // حركات وشدة وتطويل
+      .replace(/[أإآٱ]/g, 'ا')
+      .replace(/ؤ/g, 'و')
+      .replace(/[ئى]/g, 'ي');
+  }
+
   // البحث الكسول: يبحث في الأقسام المحملة مسبقاً ثم يتمدد للأقسام الأخرى تدريجياً
   async function searchAll(term, onPartial) {
     term = term.trim();
     if (!term) return [];
+    const normTerm = normalize(term);
     const idx = await loadIndex();
     const all = [];
-    // نحمل القسم القسم لتجنب القفز الكبير، ونرسل النتائج تدريجياً
     for (const ci of idx) {
       try {
         const cat = await loadCategory(ci.file);
         const matches = cat.array
-          .filter(d => d.text && d.text.includes(term))
+          .filter(d => d.text && normalize(d.text).includes(normTerm))
           .map(d => ({ ...d, _category: cat.category, _catId: cat.id }));
         if (matches.length) {
           all.push(...matches);
@@ -61,5 +71,5 @@
     return all;
   }
 
-  window.GTData = { loadIndex, loadCategory, loadAll, searchAll, BASE };
+  window.GTData = { loadIndex, loadCategory, loadAll, searchAll, normalize, BASE };
 })();
