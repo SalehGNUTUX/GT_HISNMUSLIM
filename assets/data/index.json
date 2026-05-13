@@ -1,0 +1,1062 @@
+{
+  "version": 1,
+  "total": 132,
+  "categories": [
+    {
+      "id": 1,
+      "category": "أذكار الصباح والمساء",
+      "file": "categories/001.json",
+      "count": 24,
+      "icon": "🌅",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_028.mp3"
+    },
+    {
+      "id": 2,
+      "category": "أذكار النوم",
+      "file": "categories/002.json",
+      "count": 13,
+      "icon": "🌙",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_029.mp3"
+    },
+    {
+      "id": 3,
+      "category": "أذكار الاستيقاظ من النوم",
+      "file": "categories/003.json",
+      "count": 4,
+      "icon": "☀️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_002.mp3"
+    },
+    {
+      "id": 4,
+      "category": "دعاء دخول الخلاء",
+      "file": "categories/004.json",
+      "count": 1,
+      "icon": "🚪",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_007.mp3"
+    },
+    {
+      "id": 5,
+      "category": "دعاء الخروج من الخلاء",
+      "file": "categories/005.json",
+      "count": 1,
+      "icon": "🚪",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_008.mp3"
+    },
+    {
+      "id": 6,
+      "category": "الذكر قبل الوضوء",
+      "file": "categories/006.json",
+      "count": 1,
+      "icon": "💧",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_009.mp3"
+    },
+    {
+      "id": 7,
+      "category": "الذكر بعد الفراغ من الوضوء",
+      "file": "categories/007.json",
+      "count": 3,
+      "icon": "💧",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_010.mp3"
+    },
+    {
+      "id": 8,
+      "category": "الذكر عند الخروج من المنزل",
+      "file": "categories/008.json",
+      "count": 2,
+      "icon": "🏠",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_011.mp3"
+    },
+    {
+      "id": 9,
+      "category": "الذكر عند دخول المنزل",
+      "file": "categories/009.json",
+      "count": 1,
+      "icon": "🏠",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_012.mp3"
+    },
+    {
+      "id": 10,
+      "category": "دعاء الذهاب إلى المسجد",
+      "file": "categories/010.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_013.mp3"
+    },
+    {
+      "id": 11,
+      "category": "دعاء دخول المسجد",
+      "file": "categories/011.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_014.mp3"
+    },
+    {
+      "id": 12,
+      "category": "دعاء الخروج من المسجد",
+      "file": "categories/012.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_015.mp3"
+    },
+    {
+      "id": 13,
+      "category": "أذكار الآذان",
+      "file": "categories/013.json",
+      "count": 5,
+      "icon": "📣",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_016.mp3"
+    },
+    {
+      "id": 14,
+      "category": "دعاء ُلبْس الثوب",
+      "file": "categories/014.json",
+      "count": 1,
+      "icon": "👕",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_003.mp3"
+    },
+    {
+      "id": 15,
+      "category": "دعاء ُلبْس الثوب الجديد",
+      "file": "categories/015.json",
+      "count": 1,
+      "icon": "👕",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_004.mp3"
+    },
+    {
+      "id": 16,
+      "category": "الدعاء لمن لبس ثوبا جديدا",
+      "file": "categories/016.json",
+      "count": 2,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_005.mp3"
+    },
+    {
+      "id": 17,
+      "category": "ما يقول إذا وضع ثوبه",
+      "file": "categories/017.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_006.mp3"
+    },
+    {
+      "id": 18,
+      "category": "دعاء الاستفتاح",
+      "file": "categories/018.json",
+      "count": 6,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_017.mp3"
+    },
+    {
+      "id": 19,
+      "category": "دعاء الركوع",
+      "file": "categories/019.json",
+      "count": 5,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_018.mp3"
+    },
+    {
+      "id": 20,
+      "category": "دعاء الرفع من الركوع",
+      "file": "categories/020.json",
+      "count": 3,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_019.mp3"
+    },
+    {
+      "id": 21,
+      "category": "دعاء السجود",
+      "file": "categories/021.json",
+      "count": 7,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_020.mp3"
+    },
+    {
+      "id": 22,
+      "category": "دعاء الجلسة بين السجدتين",
+      "file": "categories/022.json",
+      "count": 2,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_021.mp3"
+    },
+    {
+      "id": 23,
+      "category": "دعاء سجود التلاوة",
+      "file": "categories/023.json",
+      "count": 2,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_022.mp3"
+    },
+    {
+      "id": 24,
+      "category": "التشهد",
+      "file": "categories/024.json",
+      "count": 1,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_023.mp3"
+    },
+    {
+      "id": 25,
+      "category": "الصلاة على النبي بعد التشهد",
+      "file": "categories/025.json",
+      "count": 2,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_024.mp3"
+    },
+    {
+      "id": 26,
+      "category": "الدعاء بعد التشهد الأخير قبل السلام",
+      "file": "categories/026.json",
+      "count": 11,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_025.mp3"
+    },
+    {
+      "id": 27,
+      "category": "الأذكار بعد السلام من الصلاة",
+      "file": "categories/027.json",
+      "count": 8,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_026.mp3"
+    },
+    {
+      "id": 28,
+      "category": "دعاء صلاة الاستخارة",
+      "file": "categories/028.json",
+      "count": 1,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_027.mp3"
+    },
+    {
+      "id": 29,
+      "category": "الدعاء إذا تقلب ليلا",
+      "file": "categories/029.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_030.mp3"
+    },
+    {
+      "id": 30,
+      "category": "دعاء الفزع في النوم و من بُلِيَ بالوحشة",
+      "file": "categories/030.json",
+      "count": 1,
+      "icon": "🌙",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_031.mp3"
+    },
+    {
+      "id": 31,
+      "category": "ما يفعل من رأى الرؤيا أو الحلم",
+      "file": "categories/031.json",
+      "count": 2,
+      "icon": "😰",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_032.mp3"
+    },
+    {
+      "id": 32,
+      "category": "دعاء قنوت الوتر",
+      "file": "categories/032.json",
+      "count": 3,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_033.mp3"
+    },
+    {
+      "id": 33,
+      "category": "الذكر عقب السلام من الوتر",
+      "file": "categories/033.json",
+      "count": 1,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_034.mp3"
+    },
+    {
+      "id": 34,
+      "category": "دعاء الهم والحزن",
+      "file": "categories/034.json",
+      "count": 2,
+      "icon": "💔",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_035.mp3"
+    },
+    {
+      "id": 35,
+      "category": "دعاء الكرب",
+      "file": "categories/035.json",
+      "count": 4,
+      "icon": "💔",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_036.mp3"
+    },
+    {
+      "id": 36,
+      "category": "دعاء لقاء العدو و ذي السلطان",
+      "file": "categories/036.json",
+      "count": 3,
+      "icon": "🛡️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_037.mp3"
+    },
+    {
+      "id": 37,
+      "category": "دعاء من خاف ظلم السلطان",
+      "file": "categories/037.json",
+      "count": 2,
+      "icon": "🛡️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_038.mp3"
+    },
+    {
+      "id": 38,
+      "category": "الدعاء على العدو",
+      "file": "categories/038.json",
+      "count": 1,
+      "icon": "🛡️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_039.mp3"
+    },
+    {
+      "id": 39,
+      "category": "ما يقول من خاف قوما",
+      "file": "categories/039.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_040.mp3"
+    },
+    {
+      "id": 40,
+      "category": "دعاء من أصابه وسوسة في الإيمان",
+      "file": "categories/040.json",
+      "count": 3,
+      "icon": "☪️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_041.mp3"
+    },
+    {
+      "id": 41,
+      "category": "دعاء قضاء الدين",
+      "file": "categories/041.json",
+      "count": 2,
+      "icon": "💰",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_042.mp3"
+    },
+    {
+      "id": 42,
+      "category": "دعاء الوسوسة في الصلاة و القراءة",
+      "file": "categories/042.json",
+      "count": 1,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_043.mp3"
+    },
+    {
+      "id": 43,
+      "category": "دعاء من استصعب عليه أمر",
+      "file": "categories/043.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_044.mp3"
+    },
+    {
+      "id": 44,
+      "category": "ما يقول ويفعل من أذنب ذنبا",
+      "file": "categories/044.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_045.mp3"
+    },
+    {
+      "id": 45,
+      "category": "دعاء طرد الشيطان و وساوسه",
+      "file": "categories/045.json",
+      "count": 3,
+      "icon": "☪️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_046.mp3"
+    },
+    {
+      "id": 46,
+      "category": "الدعاء حينما يقع ما لا يرضاه أو ُ غلب على أمره",
+      "file": "categories/046.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_047.mp3"
+    },
+    {
+      "id": 47,
+      "category": "ﺗﻬنئة المولود له وجوابه",
+      "file": "categories/047.json",
+      "count": 1,
+      "icon": "👶",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_048.mp3"
+    },
+    {
+      "id": 48,
+      "category": "ما يعوذ به الأولاد",
+      "file": "categories/048.json",
+      "count": 1,
+      "icon": "👶",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_049.mp3"
+    },
+    {
+      "id": 49,
+      "category": "الدعاء للمريض في عيادته",
+      "file": "categories/049.json",
+      "count": 2,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_050.mp3"
+    },
+    {
+      "id": 50,
+      "category": "فضل عيادة المريض",
+      "file": "categories/050.json",
+      "count": 1,
+      "icon": "🏥",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_051.mp3"
+    },
+    {
+      "id": 51,
+      "category": "دعاء المريض الذي يئس من حياته",
+      "file": "categories/051.json",
+      "count": 3,
+      "icon": "🏥",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_052.mp3"
+    },
+    {
+      "id": 52,
+      "category": "تلقين المحتضر",
+      "file": "categories/052.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_053.mp3"
+    },
+    {
+      "id": 53,
+      "category": "دعاء من أصيب بمصيبة",
+      "file": "categories/053.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_054.mp3"
+    },
+    {
+      "id": 54,
+      "category": "الدعاء عند إغماض الميت",
+      "file": "categories/054.json",
+      "count": 1,
+      "icon": "⚰️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_055.mp3"
+    },
+    {
+      "id": 55,
+      "category": "الدعاء للميت في الصلاة عليه",
+      "file": "categories/055.json",
+      "count": 4,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_056.mp3"
+    },
+    {
+      "id": 56,
+      "category": "الدعاء للفرط في الصلاة عليه",
+      "file": "categories/056.json",
+      "count": 2,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_057.mp3"
+    },
+    {
+      "id": 57,
+      "category": "دعاء التعزية",
+      "file": "categories/057.json",
+      "count": 1,
+      "icon": "⚰️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_058.mp3"
+    },
+    {
+      "id": 58,
+      "category": "الدعاء عند إدخال الميت القبر",
+      "file": "categories/058.json",
+      "count": 1,
+      "icon": "⚰️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_059.mp3"
+    },
+    {
+      "id": 59,
+      "category": "الدعاء بعد دفن الميت",
+      "file": "categories/059.json",
+      "count": 1,
+      "icon": "⚰️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_060.mp3"
+    },
+    {
+      "id": 60,
+      "category": "دعاء زيارة القبور",
+      "file": "categories/060.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_061.mp3"
+    },
+    {
+      "id": 61,
+      "category": "دعاء الريح",
+      "file": "categories/061.json",
+      "count": 2,
+      "icon": "🌧️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_062.mp3"
+    },
+    {
+      "id": 62,
+      "category": "دعاء الرعد",
+      "file": "categories/062.json",
+      "count": 1,
+      "icon": "🌧️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_063.mp3"
+    },
+    {
+      "id": 63,
+      "category": "من أدعية الاستسقاء",
+      "file": "categories/063.json",
+      "count": 3,
+      "icon": "🌧️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_064.mp3"
+    },
+    {
+      "id": 64,
+      "category": "الدعاء إذا نزل المطر",
+      "file": "categories/064.json",
+      "count": 1,
+      "icon": "🌧️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_065.mp3"
+    },
+    {
+      "id": 65,
+      "category": "الذكر بعد نزول المطر",
+      "file": "categories/065.json",
+      "count": 1,
+      "icon": "🌧️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_066.mp3"
+    },
+    {
+      "id": 66,
+      "category": "من أدعية الاستصحاء",
+      "file": "categories/066.json",
+      "count": 1,
+      "icon": "🌧️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_067.mp3"
+    },
+    {
+      "id": 67,
+      "category": "دعاء رؤية الهلال",
+      "file": "categories/067.json",
+      "count": 1,
+      "icon": "🌙",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_068.mp3"
+    },
+    {
+      "id": 68,
+      "category": "الدعاء عند إفطار الصائم",
+      "file": "categories/068.json",
+      "count": 2,
+      "icon": "🍽️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_069.mp3"
+    },
+    {
+      "id": 69,
+      "category": "الدعاء قبل الطعام",
+      "file": "categories/069.json",
+      "count": 2,
+      "icon": "🍽️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_070.mp3"
+    },
+    {
+      "id": 70,
+      "category": "الدعاء عند الفراغ من الطعام",
+      "file": "categories/070.json",
+      "count": 2,
+      "icon": "🍽️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_071.mp3"
+    },
+    {
+      "id": 71,
+      "category": "دعاء الضيف لصاحب الطعام",
+      "file": "categories/071.json",
+      "count": 1,
+      "icon": "🍽️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_072.mp3"
+    },
+    {
+      "id": 72,
+      "category": "التعريض بالدعاء لطلب الطعام أو الشراب",
+      "file": "categories/072.json",
+      "count": 1,
+      "icon": "🍽️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_073.mp3"
+    },
+    {
+      "id": 73,
+      "category": "الدعاء إذا أفطر عند أهل بيت",
+      "file": "categories/073.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_074.mp3"
+    },
+    {
+      "id": 74,
+      "category": "دعاء الصائم إذا حضر الطعام ولم يفطر",
+      "file": "categories/074.json",
+      "count": 1,
+      "icon": "🍽️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_075.mp3"
+    },
+    {
+      "id": 75,
+      "category": "ما يقول الصائم إذا سابه أحد",
+      "file": "categories/075.json",
+      "count": 1,
+      "icon": "🍽️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_076.mp3"
+    },
+    {
+      "id": 76,
+      "category": "الدعاء عند رؤية باكورة الثمر",
+      "file": "categories/076.json",
+      "count": 1,
+      "icon": "🍇",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_077.mp3"
+    },
+    {
+      "id": 77,
+      "category": "دعاء العطاس",
+      "file": "categories/077.json",
+      "count": 1,
+      "icon": "🤧",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_078.mp3"
+    },
+    {
+      "id": 78,
+      "category": "ما يقال للكافر إذا عطس فحمد الله",
+      "file": "categories/078.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_079.mp3"
+    },
+    {
+      "id": 79,
+      "category": "الدعاء للمتزوج",
+      "file": "categories/079.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_080.mp3"
+    },
+    {
+      "id": 80,
+      "category": "دعاء المتزوج و شراء الدابة",
+      "file": "categories/080.json",
+      "count": 1,
+      "icon": "💍",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_081.mp3"
+    },
+    {
+      "id": 81,
+      "category": "الدعاء قبل إتيان الزوجة",
+      "file": "categories/081.json",
+      "count": 1,
+      "icon": "💍",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_082.mp3"
+    },
+    {
+      "id": 82,
+      "category": "دعاء الغضب",
+      "file": "categories/082.json",
+      "count": 1,
+      "icon": "😤",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_083.mp3"
+    },
+    {
+      "id": 83,
+      "category": "دعاء من رأى مبتلى",
+      "file": "categories/083.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_084.mp3"
+    },
+    {
+      "id": 84,
+      "category": "ما يقال في اﻟﻤﺠلس",
+      "file": "categories/084.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_085.mp3"
+    },
+    {
+      "id": 85,
+      "category": "كفارة اﻟﻤﺠلس",
+      "file": "categories/085.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_086.mp3"
+    },
+    {
+      "id": 86,
+      "category": "الدعاء لمن قال غفر الله لك",
+      "file": "categories/086.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_087.mp3"
+    },
+    {
+      "id": 87,
+      "category": "الدعاء لمن صنع إليك معروفا",
+      "file": "categories/087.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_088.mp3"
+    },
+    {
+      "id": 88,
+      "category": "ما يعصم الله به من الدجال",
+      "file": "categories/088.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_089.mp3"
+    },
+    {
+      "id": 89,
+      "category": "الدعاء لمن قال إني أحبك في الله",
+      "file": "categories/089.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_090.mp3"
+    },
+    {
+      "id": 90,
+      "category": "الدعاء لمن عرض عليك ماله",
+      "file": "categories/090.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_091.mp3"
+    },
+    {
+      "id": 91,
+      "category": "الدعاء لمن أقرض عند القضاء",
+      "file": "categories/091.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_091.mp3"
+    },
+    {
+      "id": 92,
+      "category": "دعاء الخوف من الشرك",
+      "file": "categories/092.json",
+      "count": 1,
+      "icon": "☪️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_092.mp3"
+    },
+    {
+      "id": 93,
+      "category": "الدعاء لمن قال بارك الله فيك",
+      "file": "categories/093.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_094.mp3"
+    },
+    {
+      "id": 94,
+      "category": "دعاء كراهية الطيرة",
+      "file": "categories/094.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_095.mp3"
+    },
+    {
+      "id": 95,
+      "category": "دعاء الركوب",
+      "file": "categories/095.json",
+      "count": 1,
+      "icon": "🛣️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_096.mp3"
+    },
+    {
+      "id": 96,
+      "category": "دعاء السفر",
+      "file": "categories/096.json",
+      "count": 1,
+      "icon": "🛣️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_097.mp3"
+    },
+    {
+      "id": 97,
+      "category": "دعاء دخول القرية أو البلدة",
+      "file": "categories/097.json",
+      "count": 1,
+      "icon": "🌆",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_098.mp3"
+    },
+    {
+      "id": 98,
+      "category": "دعاء دخول السوق",
+      "file": "categories/098.json",
+      "count": 1,
+      "icon": "🛒",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_099.mp3"
+    },
+    {
+      "id": 99,
+      "category": "الدعاء إذا تعس المركوب",
+      "file": "categories/099.json",
+      "count": 1,
+      "icon": "🛣️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_100.mp3"
+    },
+    {
+      "id": 100,
+      "category": "دعاء المسافر للمقيم",
+      "file": "categories/100.json",
+      "count": 1,
+      "icon": "🛣️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_101.mp3"
+    },
+    {
+      "id": 101,
+      "category": "دعاء المقيم للمسافر",
+      "file": "categories/101.json",
+      "count": 2,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_102.mp3"
+    },
+    {
+      "id": 102,
+      "category": "التكبير و التسبيح في سير السفر",
+      "file": "categories/102.json",
+      "count": 1,
+      "icon": "🛣️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_103.mp3"
+    },
+    {
+      "id": 103,
+      "category": "دعاء المسافر إذا أسحر",
+      "file": "categories/103.json",
+      "count": 1,
+      "icon": "🛣️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_104.mp3"
+    },
+    {
+      "id": 104,
+      "category": "الدعاء إذا نزل مترلا في سفر أو غيره",
+      "file": "categories/104.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_105.mp3"
+    },
+    {
+      "id": 105,
+      "category": "ذكر الرجوع من السفر",
+      "file": "categories/105.json",
+      "count": 1,
+      "icon": "🛣️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_106.mp3"
+    },
+    {
+      "id": 106,
+      "category": "ما يقول من أتاه أمر يسره أو يكرهه",
+      "file": "categories/106.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_107.mp3"
+    },
+    {
+      "id": 107,
+      "category": "فضل الصلاة على النبي صلى الله عليه و سلم",
+      "file": "categories/107.json",
+      "count": 5,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_108.mp3"
+    },
+    {
+      "id": 108,
+      "category": "إفشاء السلام",
+      "file": "categories/108.json",
+      "count": 3,
+      "icon": "🕊️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_109.mp3"
+    },
+    {
+      "id": 109,
+      "category": "كيف يرد السلام على الكافر إذا سلم",
+      "file": "categories/109.json",
+      "count": 1,
+      "icon": "🕊️",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_110.mp3"
+    },
+    {
+      "id": 110,
+      "category": "الدُّعاءُ عِنْدَ سَمَاعِ صِياحِ الدِّيكِ ونَهِيقِ الْحِمَارِ",
+      "file": "categories/110.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_111.mp3"
+    },
+    {
+      "id": 111,
+      "category": "دعاء نباح الكلاب بالليل",
+      "file": "categories/111.json",
+      "count": 1,
+      "icon": "🐓",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_112.mp3"
+    },
+    {
+      "id": 112,
+      "category": "الدعاء لمن سببته",
+      "file": "categories/112.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_113.mp3"
+    },
+    {
+      "id": 113,
+      "category": "ما يقول المسلم إذا مدح المسلم",
+      "file": "categories/113.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_114.mp3"
+    },
+    {
+      "id": 114,
+      "category": "ما يقول المسلم إذا زكي",
+      "file": "categories/114.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_115.mp3"
+    },
+    {
+      "id": 115,
+      "category": "كيف يلبي المحرم في الحج أو العمرة ؟",
+      "file": "categories/115.json",
+      "count": 1,
+      "icon": "🕋",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_116.mp3"
+    },
+    {
+      "id": 116,
+      "category": "التكبير إذا أتى الركن الأسود",
+      "file": "categories/116.json",
+      "count": 1,
+      "icon": "🕋",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_117.mp3"
+    },
+    {
+      "id": 117,
+      "category": "الدعاء بين الركن اليماني والحجر الأسود",
+      "file": "categories/117.json",
+      "count": 1,
+      "icon": "🕋",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_118.mp3"
+    },
+    {
+      "id": 118,
+      "category": "دعاء الوقوف على الصفا والمروة",
+      "file": "categories/118.json",
+      "count": 1,
+      "icon": "🕋",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_119.mp3"
+    },
+    {
+      "id": 119,
+      "category": "الدعاء يوم عرفة",
+      "file": "categories/119.json",
+      "count": 1,
+      "icon": "🕋",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_120.mp3"
+    },
+    {
+      "id": 120,
+      "category": "الذكر عند المشعر الحرام",
+      "file": "categories/120.json",
+      "count": 1,
+      "icon": "🕋",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_121.mp3"
+    },
+    {
+      "id": 121,
+      "category": "التكبير عند رمي الجمار مع كل حصاة",
+      "file": "categories/121.json",
+      "count": 1,
+      "icon": "🕋",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_122.mp3"
+    },
+    {
+      "id": 122,
+      "category": "دعاء التعجب والأمر السار",
+      "file": "categories/122.json",
+      "count": 2,
+      "icon": "✨",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_123.mp3"
+    },
+    {
+      "id": 123,
+      "category": "ما يفعل من أتاه أمر يسره",
+      "file": "categories/123.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_124.mp3"
+    },
+    {
+      "id": 124,
+      "category": "ما يقول من أحس وجعا في جسده",
+      "file": "categories/124.json",
+      "count": 1,
+      "icon": "🏥",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_125.mp3"
+    },
+    {
+      "id": 125,
+      "category": "دعاء من خشي أن يصيب شيئا بعينه",
+      "file": "categories/125.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_126.mp3"
+    },
+    {
+      "id": 126,
+      "category": "ما يقال عند الفزع",
+      "file": "categories/126.json",
+      "count": 1,
+      "icon": "😰",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_127.mp3"
+    },
+    {
+      "id": 127,
+      "category": "ما يقول عند الذبح أو النحر",
+      "file": "categories/127.json",
+      "count": 1,
+      "icon": "🐑",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_128.mp3"
+    },
+    {
+      "id": 128,
+      "category": "ما يقول لرد كيد مردة الشياطين",
+      "file": "categories/128.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_129.mp3"
+    },
+    {
+      "id": 129,
+      "category": "الاستغفار و التوبة",
+      "file": "categories/129.json",
+      "count": 6,
+      "icon": "🤲",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_130.mp3"
+    },
+    {
+      "id": 130,
+      "category": "فضل التسبيح و التحميد، و التهليل، و التكبير",
+      "file": "categories/130.json",
+      "count": 12,
+      "icon": "📿",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_131.mp3"
+    },
+    {
+      "id": 131,
+      "category": "كيف كان النبي يسبح؟",
+      "file": "categories/131.json",
+      "count": 1,
+      "icon": "💚",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_132.mp3"
+    },
+    {
+      "id": 132,
+      "category": "من أنواع الخير والآداب الجامعة",
+      "file": "categories/132.json",
+      "count": 1,
+      "icon": "🕌",
+      "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_133.mp3"
+    }
+  ]
+}
