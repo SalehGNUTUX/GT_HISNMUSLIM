@@ -1,0 +1,15 @@
+{
+  "id": 100,
+  "category": "دعاء المسافر للمقيم",
+  "audio": "https://www.hisnmuslim.com/audio/ar/ar_7esn_AlMoslem_by_Doors_101.mp3",
+  "filename": "ar_7esn_AlMoslem_by_Doors_101",
+  "array": [
+    {
+      "id": 1,
+      "text": "((أَسْتَوْدِعُكُمُ اللَّهَ الَّذِي لاَ تَضِيعُ وَدَائِعُهُ)).",
+      "count": 1,
+      "audio": "https://www.hisnmuslim.com/audio/ar/211.mp3",
+      "filename": "211"
+    }
+  ]
+}
